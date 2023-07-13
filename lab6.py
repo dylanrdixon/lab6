@@ -22,8 +22,10 @@ def encode(decoded_password):
 
 # This function decodes an 8-digit password by shifting each digit down by 3 and then returns the decoded password.
 def decode(encoded_password):
-    # WRITE CODE FOR DECODE FUNCTION
-    pass
+    decoded_password = ""
+    for num in encoded_password:
+        decoded_password += str((int(num) - 3) % 10)
+    return decoded_password
 
 
 # Establish initial variables for menu option entered by user, password entered by user and password encoded by program.
